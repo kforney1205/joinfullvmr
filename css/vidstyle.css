@@ -29,6 +29,17 @@ body {
   background-color: #0b607b;
 }
 
+.vidstage {
+  max-width: 1280px;
+  max-height: 720px;
+
+
+}
+
+.mediastream {
+max-height: 540px;
+}
+
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;

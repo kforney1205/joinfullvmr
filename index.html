@@ -1,40 +1,29 @@
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
 <head>
-<title>Jump Into a Room</title>
-<script type="text/javascript" src="https://pex-gcc.com/static/webrtc/js/pexrtc.js"></script>
-<script type="text/javascript" src="webui.js"></script>
-<link rel="stylesheet" href="css/vidstyle.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type='text/javascript'>
-window.onload = function()
-{
-    /* Params: conf node, conf name, bandwidth, display name, PIN */
-
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const params = Object.fromEntries(urlSearchParams.entries());
-    let videoid = params.videoid
-    initialise("pex-gcc.com", videoid, "1264", "Agent Video", "2021");
-}
-</script>
-
+<title>Agent Video Join</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/urlGenerate.js"></script>
 </head>
 
 <body>
-<div class="navbar">
-  <a href="#" onclick="enableMute()"><i class="fa fa-fw fa-headphones"></i>Mute Sound</a> 
-  <a href="#" onlick="muteAudioStreams();" id="id_muteaudio" class="webrtcbutton btn-audio"><i class="fa fa-fw fa-microphone-slash"></i>Mute Mic</a> 
-  <a class="active" href="#" onclick="window.location='https://kforney1205.github.io/agentjoin/';" id="id_disconnect" class="webrtcbutton btn-disconnect"><i class="fa fa-fw fa-sign-out"></i> Disconnect</a> 
-</div>
+<form action="kiosk.html" method="get">
+<div class="form">
+      <div class="title">Join Video</div>
+      <div class="subtitle">Input Session ID and Click 'Join'</div>
+     
+     <div class="input-container ic1">
+        <input name="sessionalias" id="videoID" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="videoID" class="placeholder">Session ID</label>
+      </div>
+      <button type="submit" class="submit">join</button>
+    </div>
+   </form> 
 
-<!-- <button onclick="enableMute()" type="button">Mute Audio Output</button>
-<button onclick="disableMute()" type="button">Enable Audio Output</button>
-<button onlick="muteAudioStreams();" type="button" id="id_muteaudio" class="webrtcbutton btn-audio">Mute Microphone</button>
-<button onclick="window.location='https://kforney1205.github.io/agentjoin/';" type="button" id="id_disconnect" class="webrtcbutton btn-disconnect">Disconnect from Call</button> -->
-
-
-<div width='100%' height='100%' style='overflow:auto' id="viewport">
-<video width="90%" id="video" autoplay="autoplay"/><br>
-</div>
 </body>
 </html>
+
+ 

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
+<title>Agent Video App</title>
+<script type="text/javascript" src="https://pex-gcc.com/static/webrtc/js/pexrtc.js"></script>
+<script type="text/javascript" src="js/webui.js"></script>
+<link rel="stylesheet" href="css/vidstyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type='text/javascript'>
+window.onload = function()
+{
+    /* Params: conf node, conf name, bandwidth, display name, PIN */
+    var urlSearchParams = new URLSearchParams(window.location.search);
+    var params = Object.fromEntries(urlSearchParams.entries());
+    var sessionalias = ("mp" + params.sessionalias);
+    initialise("pex-gcc.com", sessionalias, "1264", "Agent Video", "2021");
+
+}
+</script> 
+</head>
+
+<body>
+<div class="navbar">
+
+<a href="#" id="id_muteaudio" onclick="muteAudioStreams();" class="webrtcbutton btn-audio"><i class="fa fa-fw fa-microphone-slash"></i>Mute Mic</a>
+<a href="#" onclick="window.location='https://kforney1205.github.io/agentjoin/';" id="id_disconnect" class="active webrtcbutton btn-disconnect"><i class="fa fa-fw fa-sign-out"></i> Disconnect</a>
+</ul>
+</div>
+
+<div width='100%' height='100%' style='overflow:auto' class="vidstage" id="viewport">
+<video width="90%" id="video" playsinline="playsinline" poster="img/earthsnake2.gif" class="mediastream" muted autoplay="autoplay"/><br>
+</div>
+</body>
+</html>
