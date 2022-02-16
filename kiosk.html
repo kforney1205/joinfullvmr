@@ -15,7 +15,7 @@ window.onload = function()
     /* Params: conf node, conf name, bandwidth, display name, PIN */
     var urlSearchParams = new URLSearchParams(window.location.search);
     var params = Object.fromEntries(urlSearchParams.entries());
-    var sessionalias = ("mp" + params.sessionalias);
+    var sessionalias = params.sessionalias;
     initialise("pex-gcc.com", sessionalias, "1264", "Agent Video", "2021");
 
 }
