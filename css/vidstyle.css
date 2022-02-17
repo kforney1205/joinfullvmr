@@ -50,6 +50,8 @@ nav {
   transition: 120ms height linear, 120ms width linear, 120ms background-color linear;
   z-index: 100;
   position: fixed;
+  top: 100px;
+  left: 0px;
 }
 
 nav > header {
