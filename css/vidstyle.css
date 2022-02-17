@@ -85,7 +85,7 @@ nav > div {
   justify-content: center;
   align-items: center;
   transition: 240ms background-color linear;
-  font-size: 1.2em;
+  font-size: 15px;
   cursor: default;
 }
 
