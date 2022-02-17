@@ -32,7 +32,6 @@ html body {
 }
 
 video {
-  z-index: -1;
   height: 100%;
 }
 
