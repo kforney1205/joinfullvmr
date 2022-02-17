@@ -125,10 +125,6 @@ nav:hover > div {
   display: block;
 }
 
-.vidstage {
-  height: 100%;
-}
-
 
 @media screen and (max-width: 500px) {
   .navbar a {
@@ -137,8 +133,6 @@ nav:hover > div {
   }*/
 
 
-
-
-
-
+.vidstage {
+  height: 100%;
 }
