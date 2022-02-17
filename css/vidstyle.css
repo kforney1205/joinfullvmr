@@ -1,13 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
+:root {
+  --nav-size: 12vh;
+  --nav-height-open: 40vh;
+  --nav-width-full: 60vw;
+  --bg-menu: #203040;
+  --bg-hover: #405060;
+}
 
-body {
+@keyframes item-fade-in {
+  0% { opacity: 0; }
+  100% { flex: 1; opacity: 1; }
+}
+
+html body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #000;
 }
 
-.navbar {
+.foundation{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Minimal Menu Start */
+
+nav {
+  width: var(--nav-size);
+  height: var(--nav-size);
+  margin-top: 15%;
+  background-color: var(--bg-menu);
+  border-radius: 6px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  transition: 120ms height linear, 120ms width linear, 120ms background-color linear;
+}
+
+nav > header {
+  height: var(--nav-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 180ms font-size linear;
+  cursor: default;
+}
+
+nav > header > b { font-size: 2em; }
+
+nav:hover { 
+  background-color: var(--bg-hover);
+  transition: 120ms background-color linear;
+}
+
+nav:nth-child(1):hover, nav:nth-child(2):hover {
+  height: var(--nav-height-open);
+  transition: 120ms background-color linear, 240ms height linear;
+}
+
+nav:hover > header { 
+  transition: 180ms font-size linear;
+  font-size: 1.2em;
+}
+
+nav > div { 
+  height: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 240ms background-color linear;
+  font-size: 1.2em;
+  cursor: default;
+}
+
+nav:hover > div {
+  animation: 240ms item-fade-in linear forwards;
+  animation-delay: 120ms;
+  transition: 120ms background-color linear;
+}
+
+
+/* Minimal Menu END */
+
+
+/* .navbar {
   width: 100%;
   background-color: #555;
   overflow: auto;
@@ -22,31 +101,12 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #000;
+  background-color: #000; 
 }
 
 .active {
   background-color: #0b607b;
-}
-
-
-#navbarC {
-  display: flex;
-  background-color: black;
-  transform: translateY(-100%);
-  transition: transform .5s cubic-bezier(.4,0,.2,1);
-}
-#navbarC a {
-    color: white;
-    text-decoration: none;
-}
-#navbarC > * {
-  padding: 1rem;
-}
-.nav-containerC:hover #navbar {
-  transform: translateY(0);
-}
-
+} 
 
 
 .videoHolster {
@@ -74,5 +134,11 @@ body {
   .navbar a {
     float: none;
     display: block;
-  }
+  }*/
+
+
+
+
+
+
 }
