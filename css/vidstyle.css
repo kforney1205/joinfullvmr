@@ -28,7 +28,7 @@ html body {
 
 .vidstage {
   height: 100%;
-  align: center;
+  text-align: center;
 }
 
 video {
@@ -48,7 +48,8 @@ nav {
   flex-flow: column nowrap;
   justify-content: stretch;
   transition: 120ms height linear, 120ms width linear, 120ms background-color linear;
-  z-index: 10;
+  z-index: 100;
+  position: fixed;
 }
 
 nav > header {
