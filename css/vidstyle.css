@@ -23,13 +23,17 @@ html body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  float: ;
+}
+
+.vidstage {
+  height: 100%;
+  align: center;
 }
 
 video {
-  postion: fixed;
-  top: 0;
-  left: 0;
   z-index: -1;
+  height: 100%;
 }
 
 /* Minimal Menu Start */
@@ -40,7 +44,7 @@ nav {
   margin-top: 5%;
   background-color: var(--bg-menu);
   border-radius: 6px;
-  /* display: flex; */
+  display: flex;
   flex-flow: column nowrap;
   justify-content: stretch;
   transition: 120ms height linear, 120ms width linear, 120ms background-color linear;
@@ -211,6 +215,4 @@ nav:nth-child(3) > div > span:hover { font-size: 3.8em; transition: 120ms font-s
   }*/
 
 
-.vidstage {
-  height: 100%;
-}
+
