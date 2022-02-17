@@ -88,12 +88,14 @@ nav > div {
   transition: 240ms background-color linear;
   font-size: 15px;
   cursor: default;
+  width: var(--nav-size);
 }
 
 nav:hover > div {
   animation: 240ms item-fade-in linear forwards;
   animation-delay: 120ms;
   transition: 120ms background-color linear;
+  width: var(--nav-size);
 }
 
 nav:nth-child(1):hover > div:hover, nav:nth-child(2):hover > div:hover {
