@@ -31,15 +31,10 @@ body {
 }
 
 .vidstage {
-  max-width: 1280px;
-  max-height: 720px;
-
+  height: 100%;
 
 }
 
-.mediastream {
-max-height: 540px;
-}
 
 @media screen and (max-width: 500px) {
   .navbar a {
