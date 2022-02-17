@@ -66,6 +66,7 @@ nav > header > b { font-size: 2em; }
 nav:hover { 
   background-color: var(--bg-hover);
   transition: 120ms background-color linear;
+  width: var(--nav-size);
 }
 
 nav:nth-child(1):hover, nav:nth-child(2):hover {
