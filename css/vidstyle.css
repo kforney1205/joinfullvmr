@@ -2,8 +2,7 @@
 
 
 body {
-  padding: 15px;
-  background: #33383c;
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #000;
 }
@@ -31,10 +30,40 @@ body {
 }
 
 
-.videoHolster {position: relative; width: 100%;}
-.videoHolster video {display: block;}
-.videoHolster .buttons {position: absolute; bottom: 0; z-index: 1; width: 100%; text-align: center; display: none;}
-.videoHolster:hover .buttons {display: block;}
+#navbarC {
+  display: flex;
+  background-color: black;
+  transform: translateY(-100%);
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
+}
+#navbarC a {
+    color: white;
+    text-decoration: none;
+}
+#navbarC > * {
+  padding: 1rem;
+}
+.nav-containerC:hover #navbar {
+  transform: translateY(0);
+}
+
+
+
+.videoHolster {
+  position: relative; width: 100%;
+}
+
+.videoHolster video {
+  display: block;
+}
+
+.videoHolster .buttons {
+  position: absolute; bottom: 0; z-index: 1; width: 100%; text-align: center; display: none;
+}
+
+.videoHolster:hover .buttons {
+  display: block;
+}
 
 .vidstage {
   height: 100%;
