@@ -170,29 +170,31 @@ nav:nth-child(3) > div > span:hover { font-size: 3.8em; transition: 120ms font-s
 /* Minimal Menu END */
 
 
-/* .navbar {
+
+
+.navbtn {
   width: 100%;
   background-color: #555;
   overflow: auto;
 }
 
-.navbar a {
+.navbtn a {
   float: left;
   padding: 12px;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 10px;
 }
 
-.navbar a:hover {
-  background-color: #000; 
+.navbtn a:hover {
+   
 }
 
-.active {
-  background-color: #0b607b;
+.navbtn .active {
+  
 } 
 
-
+/* 
 .videoHolster {
   position: relative; width: 100%;
 }
